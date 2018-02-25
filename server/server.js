@@ -1,6 +1,7 @@
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
+var WIWrouter = require('./routes/WIWrouter.js');
 
 var port = 5000;
 

@@ -1,14 +1,16 @@
 <!DOCTYPE html>
     <head>
 
-        <script src="vendors/angular.min.js"></script>
+        <script src="vendors/angular.min.js" charset="utf-8"></script>
+        <script src="vendors/angular-route.min.js" charset="utf-8"></script>
+        
         <script type="text/javascript" src="scripts/client.js"></script>
         
 
         <title>WIW Code Challenge</title>
     </head>
     <body ng-app='myApp' ng-controller='myAppController as vm'>
-        <header ng-include="'/views/partials/cheader.html'"></header>
-        <h1>We are doing the thing. But we have a long way to go.</h1>
+        <header ng-include="'/views/partials/header.html'"></header>
+
     </body>
 </html>
