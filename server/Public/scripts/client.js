@@ -10,6 +10,15 @@ myApp.config(function($routeProvider, $locationProvider){
 myApp.controller('myAppController', ['$http', function($http){
     console.log('controller loaded');
 
+    var self = this;
+
+    self.loginRequest = function(){
+        console.log('function hit on controller');
+        
+
+    }
+
+    
 
 
 }]);
