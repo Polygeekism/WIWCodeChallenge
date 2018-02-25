@@ -9,5 +9,8 @@ var WIWpassword = 'JGRfkzhCR3MTujtt';
 var WIWaccountId = '2912246';
 var WIWuserId = '30926016';
 
+router.post('/', function(req,res){
+    console.log('login post route hit');
+})
 
 module.exports = router;

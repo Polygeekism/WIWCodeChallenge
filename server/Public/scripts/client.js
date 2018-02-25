@@ -13,8 +13,10 @@ myApp.controller('myAppController', ['$http', function($http){
     var self = this;
 
     self.loginRequest = function(){
-        console.log('function hit on controller');
-        
+        console.log('Loginrequest -- controller');
+        $http.post('/login').then(function(response){
+            console.log('response from server', response);
+        })
 
     }
 

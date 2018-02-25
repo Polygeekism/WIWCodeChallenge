@@ -7,6 +7,7 @@ var port = 5000;
 
 app.use(bodyParser.json());
 app.use(express.static('./server/public'));
+app.use('/login', WIWrouter);
 
 app.listen(port, function(){
     console.log('Listening on port:', port);
