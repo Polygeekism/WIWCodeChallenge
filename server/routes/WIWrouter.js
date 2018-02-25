@@ -9,8 +9,21 @@ var WIWpassword = 'JGRfkzhCR3MTujtt';
 var WIWaccountId = '2912246';
 var WIWuserId = '30926016';
 
-router.post('/', function(req,res){
+router.get('/', function(req,res){
     console.log('login post route hit');
+
+    var baseurl = 'https://api.wheniwork.com/2/login?';
+    baseurl += "username=" + WIWemail;
+    baseurl += "&password" + WIWpassword;
+    baseurl += "&key" + WIWtoken;
+
+    console.log('api string', baseurl);
+    $http.post(baseurl).then(function(response){
+        console.log('login attempt response', response);
+        res.send(response);
+
+    })
+    
 })
 
 module.exports = router;
