@@ -1,8 +1,9 @@
 <div class="jumbotron text-center">
         <h1>Home Page</h1>
-        <input value={{uc.userObject.users[0].first_name}}>
-        <input value={{uc.userObject.users[0].last_name}}>
-        <input value={{uc.userObject.users[0].email}}>
+        <input ng-model=uc.userObject.users[0].first_name>
+        <input ng-model=uc.userObject.users[0].last_name>
+        <input ng-model=uc.userObject.users[0].email>
+        <p>{{uc.userObject.users[0].id}}</p>
         <button ng-click="uc.updateThisUser()">Update</button>
 
         

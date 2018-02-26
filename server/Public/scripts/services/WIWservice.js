@@ -23,7 +23,13 @@ myApp.service("WIWservice", function($http, $location) {
   };
 
   self.updateThisUser = function(userInfo){
-    console.log('updateThisUser service function');
+    console.log('updateThisUser service function', userInfo);
+    var id = userInfo.users[0].id;
+    var firstName = userInfo.users[0].first_name;
+    var lastName = userInfo.users[0].last_name;
+    var email = userInfo.users[0].email;
+
+    console.log('info for update', id, firstName, lastName, email);
     // $http({
     //   method: "PUT",
     //   url: "https://api.wheniwork.com/2/users/" + id,
