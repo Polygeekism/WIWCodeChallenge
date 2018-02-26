@@ -4,7 +4,11 @@ myApp.controller('userHomeController', function(WIWservice, $http, $location){
     var self = this;
 
     self.userObject = WIWservice.userObject;
-
+    
+    self.updateThisUser = function(){
+        console.log('button clicking and linked');
+        WIWservice.updateThisUser();
+    }
     console.log('user object on user controller', self.userObject);
 
 });

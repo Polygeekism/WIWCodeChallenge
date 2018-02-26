@@ -12,6 +12,7 @@
   "dependencies": {
     "angular": "^1.6.9",
     "angular-route": "^1.6.9",
+    "angular-sessionstorage": "^1.1.5",
     "express": "^4.16.2",
     "node": "^9.5.0"
   }

@@ -1,10 +1,9 @@
 <div class="jumbotron text-center">
-    <h1>Home Page</h1>
+        <h1>Home Page</h1>
+        <input value={{uc.userObject.users[0].first_name}}>
+        <input value={{uc.userObject.users[0].last_name}}>
+        <input value={{uc.userObject.users[0].email}}>
+        <button ng-click="uc.updateThisUser()">Update</button>
 
-
-
-    <!-- This should display main user and info to be modified
-    will need update route and controller to make api call  
-might only be the one user with a job role so basically everything should be here?-->
-    <p></p>
+        
 </div>

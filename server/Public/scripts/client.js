@@ -20,7 +20,7 @@ myApp.config(['$routeProvider', '$locationProvider',
                 controller: 'loginController as lc'
             })
             .when('/home', {
-                templateUrl: '/views/home.html',
+                templateUrl: '/views/templates/home.html',
                 controller: 'userHomeController as uc'
             })
     }]);
