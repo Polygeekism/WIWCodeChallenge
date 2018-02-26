@@ -2,6 +2,8 @@ myApp.service("WIWservice", function($http, $location) {
   console.log("WIW service created");
   var self = this;
 
+  self.userObject = {};
+
   self.login = function() {
 
     console.log('login on service reached.');
@@ -14,6 +16,8 @@ myApp.service("WIWservice", function($http, $location) {
       }
     }).then(function(response) {
       console.log("login attempt response", response);
+      self.userObject = response.data;
+      console.log('user object', self.userObject);
       $location.path("/home");
     });
   };
