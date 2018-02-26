@@ -9,6 +9,6 @@ myApp.controller('userHomeController', function(WIWservice, $http, $location){
     
         WIWservice.updateThisUser(self.userObject);
     }
-   
+   console.log(self.userObject);
 
 });
