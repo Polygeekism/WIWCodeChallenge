@@ -14,11 +14,7 @@
 </head>
 
 <body  ng-app = 'myApp'>
-    <div class="topHeader">
-        <div class="headerContainer" layout='row' layout-align='space-between center'>
-            <h1 class="lead">WIW Code Challenge</h1>
-        </div>
-    </div>
+    <div ng-include="'/views/partials/header.html'"></div>
     <a id="link" href="#/login">Go to login</a>
 
     <div ng-view></div>

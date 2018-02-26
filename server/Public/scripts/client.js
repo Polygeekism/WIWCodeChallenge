@@ -16,11 +16,11 @@ myApp.config(['$routeProvider', '$locationProvider',
 
         $routeProvider
             .when('/login', {
-                templateUrl: '/views/login.html',
+                templateUrl: '/views/templates/login.html',
                 controller: 'loginController as lc'
             })
             .when('/home', {
-                templateUrl: '/views/home.html'
+                templateUrl: '/views/templates/home.html'
             })
     }]);
 
