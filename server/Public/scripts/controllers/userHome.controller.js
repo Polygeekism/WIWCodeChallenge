@@ -11,7 +11,7 @@ myApp.controller('userHomeController', function(WIWservice, $http, $location, $c
     
         WIWservice.updateThisUser(self.userObject);
     }
-    console.log(self.userObject);
+    //console.log(self.userObject);
 
     //only used to create positions
     // self.createPositions = function(){

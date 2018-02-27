@@ -9,7 +9,7 @@ myApp.service("WIWservice", function ($http, $location, $cookies) {
 
   self.login = function () {
 
-    console.log('login on service reached.');
+    //console.log('login on service reached.');
     $http({
       method: "GET",
       url: "https://api.wheniwork.com/2/login",
@@ -108,7 +108,7 @@ myApp.service("WIWservice", function ($http, $location, $cookies) {
   }
 
   self.getUserForUpdate = function (userId) {
-    console.log('userid on service for update');
+    //console.log('userid on service for update');
 
     var id = userId;
 
@@ -121,7 +121,7 @@ myApp.service("WIWservice", function ($http, $location, $cookies) {
       }
     }).then(function (response) {
       self.getPositions();
-      console.log('response from userupdate request', response)
+      //console.log('response from userupdate request', response)
       self.userForUpdate = response.data.user;
       $location.path("/userupdate");
 
@@ -136,7 +136,7 @@ myApp.service("WIWservice", function ($http, $location, $cookies) {
     var lastName = userInfo.last_name;
 
     var positions = userPositions
-    console.log('position info', positions);
+    //console.log('position info', positions);
 
     //console.log('info for update', id, firstName, lastName, email);
     $http({
