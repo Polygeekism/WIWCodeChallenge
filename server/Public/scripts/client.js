@@ -23,4 +23,8 @@ myApp.config(['$routeProvider', '$locationProvider',
                 templateUrl: '/views/templates/home.html',
                 controller: 'userHomeController as uc'
             })
+            .when('/userlist',{
+                templateUrl: '/views/templates/userlist.html',
+                controller: 'userListController as ulc'
+            })
     }]);
