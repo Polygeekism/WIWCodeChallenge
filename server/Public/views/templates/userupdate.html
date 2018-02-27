@@ -1,8 +1,12 @@
 <div class="jumbotron text-center">
         <h1>User Update</h1>
-        <input ng-model=uuc.userForUpdate.user.first_name>
-        <input ng-model=uuc.userForUpdate.user.last_name>
-        <p></p>
+        <input ng-model=uuc.userForUpdate.first_name>
+        <input ng-model=uuc.userForUpdate.last_name>
+        <p>{{uuc.userForUpdate.email}}</p>
+        
+        <div ng-repeat="position in uuc.allPositions.list.positions">
+                <input type='checkbox' value="retail" >{{position.name}}</checkbox>
+        </div>
         <button ng-click="uuc.updateThisUser()">Update</button>
 
         
