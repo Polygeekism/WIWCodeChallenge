@@ -4,9 +4,11 @@
         <input ng-model=uuc.userForUpdate.last_name>
         <p>{{uuc.userForUpdate.email}}</p>
         
-        <div ng-repeat="position in uuc.allPositions.list.positions">
-                <input type='checkbox' value="retail" >{{position.name}}</checkbox>
-        </div>
+        
+        <div ng-repeat="position in uuc.allPositions.list.positions" id="{{position.id}}">
+                <input type='checkbox' ng-change="sync(bool, position.id)" ng-model="bool" ng-checked="isChecked(position.id)">
+                {{position.name}}                     
+        </div>        
         <button ng-click="uuc.updateThisUser()">Update</button>
 
         

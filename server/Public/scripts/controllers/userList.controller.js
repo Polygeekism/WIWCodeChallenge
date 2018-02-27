@@ -4,8 +4,10 @@ myApp.controller('userListController', function(WIWservice, $http, $location){
 
     self.allUsers = WIWservice.allUsers;
     self.newUser = {};
+    self.positions = WIWservice.allPositions;
 
     WIWservice.getAllUsers();
+    WIWservice.getPositions();
 
     console.log('all users on controller', self.allUsers);
     self.newUserSubmit = function(){

@@ -31,7 +31,7 @@ myApp.service("WIWservice", function ($http, $location, $cookies) {
     if (auth == "loggedin") {
       console.log('user authorized')
     } else {
-      $location.path("/login");
+      $location.path("/");
     }
   }
 
@@ -82,11 +82,11 @@ myApp.service("WIWservice", function ($http, $location, $cookies) {
     var email = newUser.email;
     var firstName = newUser.firstName;
     var lastName = newUser.lastName;
-    var positions = [
-      "retail",
-      "supervisor",
-      "management"
-    ]
+    // var positions = [
+    //   "retail",
+    //   "supervisor",
+    //   "management"
+    // ]
 
     $http({
       method: "POST",
@@ -94,8 +94,7 @@ myApp.service("WIWservice", function ($http, $location, $cookies) {
       data: {
         "email": email,
         "first_name": firstName,
-        "last_name": lastName,
-        "positions": positions
+        "last_name": lastName
       },
       headers: {
         "W-Token":
@@ -130,16 +129,13 @@ myApp.service("WIWservice", function ($http, $location, $cookies) {
 
   }
 
-  self.userUpdate = function (userInfo) {
+  self.userUpdate = function (userInfo, userPositions) {
     //console.log('updateThisUser service function', userInfo);
     var id = userInfo.id;
     var firstName = userInfo.first_name;
     var lastName = userInfo.last_name;
-    var positions = [
-      { "retail": userInfo.positions.retail },
-      { "supervisor": userInfo.positions.supervisor },
-      { "management": userInfo.positions.management }
-    ]
+
+    var positions = userPositions
     console.log('position info', positions);
 
     //console.log('info for update', id, firstName, lastName, email);
@@ -149,7 +145,8 @@ myApp.service("WIWservice", function ($http, $location, $cookies) {
       data: {
         "first_name": firstName,
         "last_name": lastName,
-        //"positions": positions
+        "positions": positions
+        
       },
       headers: {
         "W-Token":

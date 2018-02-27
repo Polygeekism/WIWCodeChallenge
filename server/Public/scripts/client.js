@@ -16,7 +16,7 @@ myApp.config(['$routeProvider', '$locationProvider',
         $locationProvider.hashPrefix('');
 
         $routeProvider
-            .when('/login', {
+            .when('/', {
                 templateUrl: '/views/templates/login.html',
                 controller: 'loginController as lc'
             })
