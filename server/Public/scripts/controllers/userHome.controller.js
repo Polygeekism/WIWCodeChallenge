@@ -1,5 +1,5 @@
 myApp.controller('userHomeController', function(WIWservice, $http, $location){
-    console.log('User home controller loaded');
+    //console.log('User home controller loaded');
 
     var self = this;
     WIWservice.login();

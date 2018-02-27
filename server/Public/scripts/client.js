@@ -11,7 +11,7 @@ var WIWuserId = '30926016';
 
 myApp.config(['$routeProvider', '$locationProvider',
     function ($routeProvider, $locationProvider) {
-        console.log('myApp -- config');
+        //console.log('myApp -- config');
         $locationProvider.hashPrefix('');
 
         $routeProvider

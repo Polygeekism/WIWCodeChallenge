@@ -2,36 +2,52 @@
     We are going to do the things here
 
     <table class="table">
-            <thead>
-              <tr>
-                <th scope="col">#</th>
+        <thead>
+            <tr>
                 <th scope="col">First</th>
                 <th scope="col">Last</th>
-                <th scope="col">Handle</th>
+                <th scope="col">Email</th>
                 <th scope="col">Update</th>
                 <th scope="col">Delete</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
                 <td>Mark</td>
                 <td>Otto</td>
                 <td>@mdo</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
+                <td><button>Update</button></td>
+                <td><button>Delete</button></td>
+            </tr>
+            <tr>
                 <td>Jacob</td>
                 <td>Thornton</td>
                 <td>@fat</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
+                <td><button>Update</button></td>
+                <td><button>Delete</button></td>
+            </tr>
+            <tr>
                 <td>Larry</td>
                 <td>the Bird</td>
                 <td>@twitter</td>
-              </tr>
-            </tbody>
-          </table>
+                <td><button>Update</button></td>
+                <td><button>Delete</button></td>
+            </tr>
+            <tr ng-repeat="user in ulc.allUsers.list">
+                <td>{{user.first_name}}</td>
+                <td>{{user.last_name}}</td>
+                <td>{{user.email}}</td>
+                <td><button>Update</button></td>
+                <td><button>Delete</button></td>
+            </tr>
+            <tr>
+                <td><input type="text" ng-model="ulc.newUser.firstName"></td>
+                <td><input type="text" ng-model="ulc.newUser.lastName"></td>
+                <td><input type="text" ng-model="ulc.newUser.email"></td>
+                <td><button ng-click="ulc.newUserSubmit()">Add New User</button></td>
+            </tr>
+        </tbody>
+    </table>
+
 
 </div>
