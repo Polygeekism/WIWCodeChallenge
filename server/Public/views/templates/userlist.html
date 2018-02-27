@@ -1,5 +1,5 @@
 <div>
-    We are going to do the things here
+    
 
     <table class="table">
         <thead>
@@ -7,38 +7,18 @@
                 <th scope="col">First</th>
                 <th scope="col">Last</th>
                 <th scope="col">Email</th>
+                <th scope="col">Positions</th>
                 <th scope="col">Update</th>
-                <th scope="col">Delete</th>
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-                <td><button>Update</button></td>
-                <td><button>Delete</button></td>
-            </tr>
-            <tr>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-                <td><button>Update</button></td>
-                <td><button>Delete</button></td>
-            </tr>
-            <tr>
-                <td>Larry</td>
-                <td>the Bird</td>
-                <td>@twitter</td>
-                <td><button>Update</button></td>
-                <td><button>Delete</button></td>
-            </tr>
             <tr ng-repeat="user in ulc.allUsers.list">
                 <td>{{user.first_name}}</td>
                 <td>{{user.last_name}}</td>
                 <td>{{user.email}}</td>
-                <td><button>Update</button></td>
-                <td><button>Delete</button></td>
+                <td>{{user.positions}}</td>
+                <td><button ng-click="ulc.updateUser(user.id)">Edit</button></td>
+                
             </tr>
             <tr>
                 <td><input type="text" ng-model="ulc.newUser.firstName"></td>

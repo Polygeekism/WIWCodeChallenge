@@ -14,4 +14,9 @@ myApp.controller('userListController', function(WIWservice, $http, $location){
         self.newUser = {};
     }
     
+    self.updateUser = function(userId){
+        console.log('id from list page', userId);
+        WIWservice.getUserForUpdate(userId);
+    }
+    
 })
